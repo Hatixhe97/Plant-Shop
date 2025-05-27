@@ -1,0 +1,44 @@
+
+.description{
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.description p{
+    color: #1E1E1E;
+    opacity: 50%;
+    margin-top: -10px;
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.card{
+    text-align: center;
+    width: 400px;
+    height: 213px;
+}
+
+.card p:first-of-type{
+    font-weight: 700;
+}
+
+
+.card p:last-of-type{
+    color: #1E1E1E;
+    opacity: 50%;
+}
+
+.card img{
+    width: 96px;
+    height: 96px;
+}
+
