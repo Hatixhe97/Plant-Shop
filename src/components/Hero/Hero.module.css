@@ -1,0 +1,71 @@
+
+.hero{
+    
+}
+
+.herotitle{ 
+    position: absolute;
+    width: 1248px;
+    height: 512px;
+    background-color: rgba(231, 255, 206, 1);
+    top: 96px;
+    border-radius: 40px;
+    z-index: -2;
+    margin: 0 50px;
+}
+
+.herotitle h1{
+    position: relative;
+    top: 50px;
+    left: 40px;
+    font-size: 64px;
+    width: 400px;
+}
+
+.heroPlant img{
+    position: relative;
+    width: 450px;
+    height: 400px;
+    top: -77px;
+    left: 726px;
+}
+.heroFlex{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-left: 40px;
+    color: rgba(30, 30, 30);
+}
+
+.heroFlex h2{
+    font-size: 32px;
+    margin-bottom: -15px;
+    
+}
+
+.heroFlex p{
+    font-size: 18px;
+   
+}
+
+.heroFlex img{
+    margin-top: 20px;
+}
+
+.vector1 img{
+    position: relative;
+    width: 120px;
+    height: 154px;
+    top: -30px;
+    left: 1100px;
+    transform: rotate(-7.13deg)
+}
+
+.vector2 img{
+    position: relative;
+    width: 150px;
+    height: 169px;
+    left: 550px;
+    top: -250px;
+    transform: rotate(-5.14deg)
+}
