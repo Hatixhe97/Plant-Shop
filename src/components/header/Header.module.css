@@ -1,0 +1,78 @@
+.innercontainer{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1{
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 30px;
+    list-style: none;
+    gap: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.options li:hover{
+    color: rgb(34, 156, 103);
+    transition: 0.5 ease;
+    font-weight: 700;
+    position: relative;
+}
+
+
+
+.thetop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+}
+
+.submenu{
+   position: absolute;
+   top: 60px;
+   left: 370px;
+   list-style: none;
+   width: 130px;
+   height: 80px;
+   background-color: rgb(148, 223, 148);
+   padding: 0 5px;
+   margin-top: 20px;
+   text-align: inherit;
+   padding: 10px ;
+   color: black;
+   border-radius: 20px;
+   font-size: 15px;
+}
+
+.submenu li{
+    border-bottom: 1px solid rgb(34, 156, 103) ;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.arrow{
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
