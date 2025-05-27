@@ -1,0 +1,61 @@
+.bestselling{
+  display: flex;
+  gap: 50px;
+ margin: -180px 50px 100px;
+}
+
+.plantlist {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.plantcard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 299px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+
+
+.plantcard img {
+  width: 299px;
+  height: 363px;
+  border-radius: 5px;
+}
+
+.plantcard button {
+ 
+  padding: 8px 12px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.plantcard button:hover {
+  background-color: #45a049;
+}
+
+.arrow{
+  padding: 10px 15px;
+  background-color: #C1DCDC;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow:hover{
+  background-color: #a3b9b9;
+}
