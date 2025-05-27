@@ -1,0 +1,57 @@
+
+.title{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.categories{
+    position: relative;
+    background-color: rgba(231, 255, 206, 1);
+    min-width: 1350px;
+    height: 770px;
+}
+
+.categories p{
+    width: 352px;
+    height: 52px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+
+.card1{
+    position: absolute;
+    margin-top: -50px;
+    left: 60px;
+}
+
+.card2{
+    position: absolute;
+    margin-top: 50px;
+    left: 500px;
+    right: 500px;
+    text-align: center;
+}
+
+.arrow{ 
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 125px;
+}
+
+
+.card3{
+    position: absolute;
+    margin-top: -50px;
+    right: 60px;
+    
+}
