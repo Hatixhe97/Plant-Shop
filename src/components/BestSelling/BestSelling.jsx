@@ -4,7 +4,8 @@ import styles from'./BestSelling.module.css';
 import FiddleLeaf from '../../assets/images/FiddleLeaf.webp'
 import SnakePlant from '../../assets/images/SnakePlant.webp'
 import PeaceLily from '../../assets/images/PeaceLily.jpg'
-
+import Header from '../header/header';
+import Footer from '../Footer/Footer';
 
 const initialPlants = [
   {
@@ -46,6 +47,7 @@ const BestSelling = () => {
   const bestSellers = plants.filter((plant) => plant.soldCount >= 5);
 
   return (
+    <>
     <section className={styles.bestselling}>
       <h2>Best Selling Plants</h2>
       {bestSellers.length === 0 ? (
@@ -79,7 +81,10 @@ const BestSelling = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
+
+
 
 export default BestSelling;

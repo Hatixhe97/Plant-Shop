@@ -12,9 +12,17 @@ const Footer =()=>{
                 <p>GREENMIND</p>
                 <p className={styles.p2}>We help you find your dream plant</p>
                 <div className={styles.icons}>
-                    <img src={facebook} alt="facebook" />
-                    <img src={insta} alt="instagram" />
-                    <img src={twitter} alt="twitter" />
+                   <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={facebook} alt="facebook" />
+                   </a>
+
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                     <img src={insta} alt="instagram" />
+                   </a>
+
+                   <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                      <img src={twitter} alt="twitter" />
+                   </a>
                 </div>
 
             </div>

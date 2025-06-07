@@ -3,6 +3,8 @@ import addToCart from "../../assets/icons/add-to-cart.svg";
 import Login from "../../assets/icons/LogIn.svg";
 import styles from "./Header.module.css";
 import { FaChevronDown } from 'react-icons/fa';
+import { CUSTOM_ROUTES } from "../constants/custom-routes";
+import { Link } from 'react-router-dom';
 
 
 const Header = () =>{
@@ -41,10 +43,16 @@ const Header = () =>{
                     
 
                     <ul className={styles.options}>
-                     <li>Home</li>
+                     <li>
+                      <Link to={CUSTOM_ROUTES.HOME}>Home</Link>
+                      </li>
                      <li ref={ref}>Plants <span className="arrow">  <FaChevronDown style={{ fontSize: '12px' }} /> </span></li>
-                     <li>Faq</li>
-                     <li>Contacts</li>
+                     <li>
+                      <Link to ={CUSTOM_ROUTES.FAQ}>Faq</Link>
+                      </li>
+                     <li>
+                      <Link to={CUSTOM_ROUTES.CONTACT}>Contacts</Link>
+                     </li>
                    </ul>
                     
                  {submenu && (

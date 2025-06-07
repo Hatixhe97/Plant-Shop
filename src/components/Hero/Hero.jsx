@@ -11,7 +11,7 @@ const Hero = () => {
     return (
         <>
 
-        <div className={styles.hero}>
+        <div>
 
             <div>
               <div className={styles.herotitle}>
@@ -22,7 +22,7 @@ const Hero = () => {
                          <p>Plant Species</p>
                       </div>
                       <div>
-                        <img src={Line} alt="" />
+                        <img src={Line} alt="LINE" />
                       </div>
 
                       <div>
@@ -37,7 +37,7 @@ const Hero = () => {
 
             <div >
               <div className={styles.vector1}>
-                 <img src={VectorUp} alt="" />
+                 <img src={VectorUp} alt="VECTOR" />
               </div>
 
               <div className={styles.heroPlant}>
@@ -45,13 +45,9 @@ const Hero = () => {
               </div>
 
               <div className={styles.vector2}> 
-                 <img src={VectorDown} alt="" />
+                 <img src={VectorDown} alt="VECTOR" />
               </div>
-            </div>
-
-
-            
-            
+            </div> 
         </div>
         </>
     )

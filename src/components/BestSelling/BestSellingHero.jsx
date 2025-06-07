@@ -4,6 +4,7 @@ import SnakePlant from '../../assets/images/SnakePlant.webp'
 import PeaceLily from '../../assets/images/PeaceLily.jpg'
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
+import { CUSTOM_ROUTES } from '../constants/custom-routes';
 
 
 
@@ -33,11 +34,13 @@ const BestSellingHero = ()=>{
 
  const handleAddToCart = (plant) => {
   };
+  
+  const navigate = useNavigate();
 
- const navigate = useNavigate();
- const handleSeeMore = () => {
-    navigate('/BestSelling');
-  };
+  const handleSeeMore = () => {
+    navigate(CUSTOM_ROUTES.BESTSELLING);
+  }
+
 
 
     return(
@@ -66,7 +69,7 @@ const BestSellingHero = ()=>{
       return (
      <Router>
       <Routes>
-        <Route path="/" element={<BestSellingHero />} />
+        
         <Route path="/BestSellingPlants" element={<BestSelling />} />
       </Routes>
     </Router>
