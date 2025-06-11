@@ -1,0 +1,58 @@
+
+
+.logincart{
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 299px;
+    height: 460px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: auto;
+}
+
+.logincart h1{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.logincart button{
+    margin-left: 100px ;   
+}
+
+.logincart input{
+    border: 1px solid #444;
+    padding: 10px 0;
+    margin: 20px 0;
+    background: transparent;
+    outline: none;
+    border-radius: 10px;
+}
+
+.click{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+
+.select{
+    display: flex;
+    flex-direction: column;
+}
+
+.select p{
+    font-size: 12px;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}

@@ -5,4 +5,6 @@ export const CUSTOM_ROUTES ={
     FAQ :'/Faq',
     CONTACT:'/Contact',
     BESTSELLING:'/BestSelling',
+    LOGIN:'/Login',
+    REGISTER:'/Register',
 }

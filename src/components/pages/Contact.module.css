@@ -1,0 +1,61 @@
+
+.contactcontainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+    margin: 20px 0;
+    background: transparent;
+    outline: none;
+}
+
+
+label{
+    font-size: 14px;
+    color: #333;
+}
+
+
+button{
+    width: 109px;
+    height: 37px;
+    border-radius: 40px;
+    color: white;
+    background-color: #C1DCDC;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #a3b9b9 ;
+    border: none;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.details img{
+    margin-right: 10px;
+}
+
+.icon{
+    margin-left: 200px;
+    margin-top: 100px;
+    
+}
+
