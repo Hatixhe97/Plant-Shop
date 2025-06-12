@@ -6,16 +6,16 @@ import { login} from '../../services/authServices';
 
 const Login=()=>{
 
-    /*const navigate = useNavigate();
+    const navigate = useNavigate();
     
-    const handleCreatAccount = () => {
+    /*const handleCreatAccount = () => {
         navigate(CUSTOM_ROUTES.REGISTER);
     }*/
 
     const [email,setEmail] = useState ('');
     const [password,setPassword] = useState ('');
 
-    const [isRegistrationSuccess, setIsRegistrationSuccess]=useState(false)
+    //const [isRegistrationSuccess, setIsRegistrationSuccess]=useState(false)
 
 
     const handleLogin = async (event) =>{
@@ -27,17 +27,18 @@ const Login=()=>{
 
         try{
             await login(email,password);
-            setIsRegistrationSuccess(true);
+            navigate(CUSTOM_ROUTES.HOME)
         } catch (error) {
+            alert('Login failed!')
 
         }
     }
 
-  if (isRegistrationSuccess) {
+  /*if (isRegistrationSuccess) {
         return(
          <h1>Registration was successfully!</h1>
         )
-    }
+    }*/
 
     
 

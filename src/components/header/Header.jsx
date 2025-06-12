@@ -19,36 +19,41 @@ const Header = () =>{
 
   const { user} = useAuth();
 
-  //const ref = useRef ();
   const userMenuRef=useRef();
 
     const handleMouseEnter =()=> setSubmenu(true);
     const handleMouseLeave =()=> setSubmenu(false);
 
-    /*useEffect(()=>{
-     const refCopy = ref.current ;
-     if (!refCopy) return;
-
-     refCopy.addEventListener("mouseenter", handleMouseEnter );
-     refCopy.addEventListener("mouseleave", handleMouseLeave);
-
-     return () => {
-        refCopy.removeEventListener("mouseenter", handleMouseEnter );
-        refCopy.removeEventListener("mouseleave", handleMouseLeave);
-
-      }
-
-    },[])*/
-
+    
   const navigate = useNavigate();
 
   const handleLogin = () => {
     navigate(CUSTOM_ROUTES.LOGIN);
   }
 
-  const handleLogout = () =>{
-    
+  const handleLogout = async () => {
+  try {
+    await logout(); 
+    setUser(null); 
+    setShowUserMenu(false); 
+    navigate(CUSTOM_ROUTES.HOME); 
+  } catch (error) {
+    console.error("Logout failed", error);
   }
+ };
+
+
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+      setShowUserMenu(false);
+    }
+  };
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+ }, []);
 
   
 
@@ -98,10 +103,27 @@ const Header = () =>{
             <div className={styles.icons}>
                 <img src={addToCart} alt="AddToCart" />
 
-                <div>
-                  {user ? ( <img onClick={()=>logout()} src={menu} alt="Menu"/>) : (<img onClick={handleLogin} src={Login } alt="Login" />)}
-                </div>
-            </div>
+                <div className={styles.userMenuWrapper} ref={userMenuRef}>
+                    {user ? (
+                   <div className={styles.dropdownContainer}>
+                      <img
+                      src={menu}
+                      alt="User Menu"
+                      onClick={() => setShowUserMenu(prev => !prev)}
+                     className={styles.userIcon}
+                      />
+                      {showUserMenu && (
+                        <ul className={styles.dropdownMenu}>
+                          <li><Link to="/personal-settings">Personal Settings</Link></li>
+                          <li><Link to="/orders">Orders</Link></li>
+                          <li><Link to="/product-base">Product Base</Link></li>
+                          <li><Link to="/support">Contact Support</Link></li>
+                          <li onClick={handleLogout}>Logout</li>
+                        </ul>
+                     )}
+                   </div> ) : ( <img onClick={handleLogin} src={Login} alt="Login" />)}
+                 </div>
+               </div>
 
         </div>
       </div>

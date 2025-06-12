@@ -16,7 +16,7 @@ const FAQPage = ()=>{
     const getFAQs = async () => {
       try {
         const data = await fetchFAQs();
-        console.log("FAQ data:", data); // <- KJO është kyçe
+        console.log("FAQ data:", data); 
 
         setFaqData(data);
       } catch (error) {
