@@ -64,7 +64,7 @@ const Login=()=>{
                  <p>Don’t have an account? <Link to={CUSTOM_ROUTES.REGISTER}><span className={styles.click} /*onClick={handleCreatAccount}*/>Create</span></Link></p>
                </div>
 
-                <button>Log In</button>
+                <button className={styles.button}>Log In</button>
 
             </form>
            

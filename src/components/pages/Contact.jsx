@@ -28,10 +28,13 @@ const Contact = () => {
             <input type="text" name="name" placeholder="Name" />
             <input type="text" name="Email" placeholder="Email" />
             <input type="text" name="Message" placeholder="Message" />
-            <label>
-              <input style={{marginRight:'10px'}} type="checkbox" checked={agreed} onChange={handleChange} />
-              I would like to receive the newsletter.
-            </label>
+            <div className={styles.formcheck}>
+              <label >
+                <input  type="checkbox" checked={agreed} onChange={handleChange} />
+                I would like to receive the newsletter.
+              </label>
+            </div>
+            
             <button type="submit">Submit</button>
           </form>
         </div>

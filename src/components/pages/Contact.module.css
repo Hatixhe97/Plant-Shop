@@ -11,7 +11,7 @@
     gap: 30px;
 }
 
-input{
+ input{
     border: none;
     border-bottom: 1px solid #444;
     padding: 10px 0;
@@ -21,13 +21,13 @@ input{
 }
 
 
-label{
-    font-size: 14px;
+.formcheck label{
+    font-size: 12px;
     color: #333;
 }
 
 
-button{
+.contactcontainer button{
     width: 109px;
     height: 37px;
     border-radius: 40px;
@@ -38,7 +38,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.contactcontainer button:hover{
     background-color: #a3b9b9 ;
     border: none;
 }
@@ -58,4 +58,15 @@ button:hover{
     margin-top: 100px;
     
 }
+
+.formcheck{
+    display: flex;
+    flex-direction: row;
+}
+
+.formcheck input{
+    width: 10px;
+    height: 10px;
+}
+
 
