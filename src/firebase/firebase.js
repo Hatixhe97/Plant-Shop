@@ -26,6 +26,4 @@ export const fetchFAQs = async () => {
   const faqCollection = collection(db, 'faqs');
   const faqSnapshot = await getDocs(faqCollection);
   return faqSnapshot.docs.map(doc => doc.data());
-   console.log('firebase',data)
-   return data;
 };
