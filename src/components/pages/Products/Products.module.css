@@ -1,23 +1,24 @@
 
-.bestselling {
+.products {
   padding: 50px 20px;
   text-align: center;
 }
 
-.bestselling h2 {
+.products h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #2e7d32;
+  margin-bottom: 70px;
 }
 
-.plantgrid {
+.productgrid {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.plantcard {
+.productcard {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -26,19 +27,18 @@
   transition: transform 0.3s ease;
 }
 
-.plantcard:hover {
+.productcard:hover {
   transform: translateY(-5px);
 }
 
-.plantcard img {
+.productcard img {
   width: 250px;
   height: 363px;
   border-radius: 5px;
 }
 
 
-
-.plantcard p {
+.productcard p {
   margin-bottom: 10px;
   font-weight: bold;
   color: #388e3c;
@@ -57,31 +57,4 @@
 
 .addtocart:hover {
   background-color: #1b5e20;
-}
-
-.arrowback{
-    background-color: rgba(231, 255, 206, 1);
-    border: none;
-    border-radius: 20px;
-    padding: 10px 15px;
-    color: black;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.arrowback:hover{
-    color:  #FFFFFF;
-
-}
-
-.link{
-  text-decoration: none;
-  color: black;
-}
-
-.link:hover{
-  color: #FFFFFF;
 }

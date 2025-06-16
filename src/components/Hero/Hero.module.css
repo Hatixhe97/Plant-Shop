@@ -1,13 +1,13 @@
 
 .herotitle{ 
     position: absolute;
-    width: 1248px;
+    width: 1270px;
     height: 512px;
     background-color: rgba(231, 255, 206, 1);
     top: 96px;
     border-radius: 40px;
     z-index: -2;
-    margin: 0 50px;
+    margin: 0 90px 30px;
 }
 
 .herotitle h1{

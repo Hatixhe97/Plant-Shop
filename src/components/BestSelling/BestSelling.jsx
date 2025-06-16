@@ -1,90 +1,74 @@
-
-import React, { useState } from 'react';
-import styles from'./BestSelling.module.css';
-import FiddleLeaf from '../../assets/images/FiddleLeaf.webp'
-import SnakePlant from '../../assets/images/SnakePlant.webp'
-import PeaceLily from '../../assets/images/PeaceLily.jpg'
-import Header from '../header/header';
-import Footer from '../Footer/Footer';
-
-const initialPlants = [
-  {
-    id: 1,
-    name: 'Fiddle Leaf Fig',
-    price: '$29.99',
-    image: FiddleLeaf,
-    soldCount: 0,
-  },
-  {
-    id: 2,
-    name: 'Snake Plant',
-    price: '$19.99',
-    image: SnakePlant,
-    soldCount: 0,
-  },
-  {
-    id: 3,
-    name: 'Peace Lily',
-    price: '$24.99',
-    image: PeaceLily,
-    soldCount: 0,
-  },
-];
+import React, { useEffect, useState } from "react";
+import styles from "./BestSelling.module.css";
+import { getAllProducts } from "../../services/productService";
+import { CUSTOM_ROUTES } from "../constants/custom-routes";
+import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import { useCart } from "../../Store/CartContext";
 
 const BestSelling = () => {
-  const [plants, setPlants] = useState(initialPlants);
+  const [plants, setPlants] = useState([]);
+  const { addToCart } = useCart();
+
+  useEffect(() => {
+    const fetchPlants = async () => {
+      const data = await getAllProducts();
+      setPlants(data);
+    };
+    fetchPlants();
+  }, []);
 
   const handleAddToCart = (plantId) => {
-    setPlants((prevPlants) =>
-      prevPlants.map((plant) =>
-        plant.id === plantId
-          ? { ...plant, soldCount: plant.soldCount + 1 }
-          : plant
-      )
-    );
+    const selected = plants.find((p) => p.id === plantId);
+    if (selected) {
+      addToCart(selected);
+    }
   };
 
-  const bestSellers = plants.filter((plant) => plant.soldCount >= 5);
+  const bestSellers = plants.filter((plant) => (plant.soldCount || 0) >= 5);
 
   return (
     <>
-    <section className={styles.bestselling}>
-      <h2>Best Selling Plants</h2>
-      {bestSellers.length === 0 ? (
-        <p>No best sellers yet.</p>
-      ) : (
+      <section className={styles.bestselling}>
+        <button className={styles.arrowback}>
+          <Link to={CUSTOM_ROUTES.HOME} className={styles.link}>
+            <FaArrowLeft /> Back to Home
+          </Link>
+        </button>
+        <h2>Best Selling Plants</h2>
+        {bestSellers.length === 0 ? (
+          <p>No best sellers yet.</p>
+        ) : (
+          <div className={styles.plantgrid}>
+            {bestSellers.map((plant) => (
+              <div className={styles.plantcard} key={plant.id}>
+                <img src={plant.image} alt={plant.name} />
+                <p>{plant.name}</p>
+                <p>${plant.price}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <h2 style={{ marginTop: "40px" }}>All Plants</h2>
         <div className={styles.plantgrid}>
-          {bestSellers.map((plant) => (
+          {plants.map((plant) => (
             <div className={styles.plantcard} key={plant.id}>
               <img src={plant.image} alt={plant.name} />
-              <h3>{plant.name}</h3>
-              <p>{plant.price}</p>
+              <p>{plant.name}</p>
+              <p>{plant.price}€</p>
+              <button
+                className={styles.addtocart}
+                onClick={() => handleAddToCart(plant.id)}
+              >
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>
-      )}
-
-      <h2 style={{ marginTop: '40px' }}>All Plants</h2>
-      <div className={styles.plantgrid}>
-        {plants.map((plant) => (
-          <div className={styles.plantcard} key={plant.id}>
-            <img src={plant.image} alt={plant.name} />
-            <h3>{plant.name}</h3>
-            <p>{plant.price}</p>
-            <button
-              className={styles.addtocart}
-              onClick={() => handleAddToCart(plant.id)}
-            >
-              Add to Cart
-            </button>
-          </div>
-        ))}
-      </div>
-    </section>
+      </section>
     </>
   );
 };
-
-
 
 export default BestSelling;

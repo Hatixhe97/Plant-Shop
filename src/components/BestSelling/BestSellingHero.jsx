@@ -65,16 +65,7 @@ const BestSellingHero = ()=>{
   );
 }
 
-/*const BestSellingPlants =()=>{
-      return (
-     <Router>
-      <Routes>
-        
-        <Route path="/BestSellingPlants" element={<BestSelling />} />
-      </Routes>
-    </Router>
-  );
-}*/
+
 
 
 

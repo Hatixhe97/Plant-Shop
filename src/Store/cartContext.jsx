@@ -1,6 +1,5 @@
+import { createContext, useContext } from "react";
 
-import { createContext,useContext } from "react";
+export const cartContext = createContext();
 
-export const CartContext=createContext();
-
-export const useCart =()=> useContext(CartContext)
+export const useCart = () => useContext(cartContext);

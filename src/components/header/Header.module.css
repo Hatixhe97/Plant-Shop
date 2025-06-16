@@ -1,5 +1,4 @@
 .innercontainer{
-    max-width: 1440px;
     margin: 0 auto;
     padding: 30px;
 }
@@ -67,6 +66,7 @@
   gap: 5px;
 }
 
+
 .submenu {
   position: absolute;
   top: 100%;
@@ -74,11 +74,24 @@
   background-color: white;
   border: 1px solid #ddd;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 10px;
   z-index: 1000;
   min-width: 180px;
 }
+
+
+
+.linkItem {
+  text-decoration: none;
+  color: black; 
+}
+
+.linkItem:hover{
+    color: rgb(34, 156, 103);
+
+}
+
 
 .submenu li {
   padding: 10px;
@@ -115,11 +128,11 @@
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 180px;
+  border-radius: 10px;
+  width: 350px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   z-index: 1000;
-  padding: 10px 0;
+  padding: 10px 15px ;
 }
 
 .dropdownMenu li {
@@ -136,6 +149,45 @@
 .dropdownMenu li a {
   text-decoration: none;
   color: black;
-  display: block;
   width: 100%;
+}
+
+
+.textdecoration{
+    border-bottom: 1px solid #E9E9E9;
+    width: 315px;
+    margin-bottom: 10px;
+}
+
+.menuicon{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    justify-items: center;
+}
+
+.menuicon img {
+  width: 20px; 
+  height: auto;
+}
+
+.cart{
+    position: relative;
+}
+
+.cartitem {
+    position: absolute;
+    background-color: rgba(231, 255, 206, 1) ;
+    color: black;
+    width: 25px;
+    height: 25px;
+    right:110px;
+    top: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }

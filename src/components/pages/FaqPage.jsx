@@ -6,9 +6,6 @@ import styles from '../../components/FAQ/Faq.module.css'
 
 const FAQPage = ()=>{
 
-    
-
-
     const [faqData, setFaqData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -16,7 +13,6 @@ const FAQPage = ()=>{
     const getFAQs = async () => {
       try {
         const data = await fetchFAQs();
-        console.log("FAQ data:", data); 
 
         setFaqData(data);
       } catch (error) {
