@@ -8,7 +8,7 @@ export const getProductsByCategory = async (category) => {
     const snapshot = await getDocs(q);
     return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   } catch (error) {
-    console.error("Gabim gjatë marrjes së produkteve:", error);
+    console.error("Error during product retrieval", error);
     return [];
   }
 };
@@ -19,7 +19,7 @@ export const getAllProducts = async () => {
     const snapshot = await getDocs(collection(db, "products"));
     return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   } catch (error) {
-    console.error("Gabim gjatë marrjes së produkteve:", error);
+    console.error("Error during product retrieval", error);
     return [];
   }
 };

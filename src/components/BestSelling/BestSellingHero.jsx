@@ -5,6 +5,8 @@ import PeaceLily from '../../assets/images/PeaceLily.jpg'
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import { CUSTOM_ROUTES } from '../constants/custom-routes';
+import { cartContext } from '../../Store/CartContext';
+import { useContext } from 'react';
 
 
 
@@ -14,26 +16,35 @@ const BestSellingHero = ()=>{
   {
     id: 1,
     name: 'Fiddle Leaf Fig',
-    price: '$29.99',
+    price: '29.99',
     image: FiddleLeaf,
     
   },
   {
     id: 2,
     name: 'Snake Plant',
-    price: '$19.99',
+    price: '19.99',
     image: SnakePlant,
   },
   {
     id: 3,
     name: 'Peace Lily',
-    price: '$24.99',
+    price: '24.99',
     image: PeaceLily,
   },
  ];
 
- const handleAddToCart = (plant) => {
-  };
+ 
+
+ const handleAddToCart = (plantId) => {
+  const selected = BestSellingPlants.find((p) => p.id === plantId);
+  if (selected) {
+    addToCart(selected);
+  }
+};
+
+  const { addToCart } = useContext(cartContext);
+
   
   const navigate = useNavigate();
 
@@ -57,7 +68,8 @@ const BestSellingHero = ()=>{
              <div className={styles.plantcard} key={plant.id}>
                  <img src={plant.image} alt={plant.name} />
                  <p>{plant.name}</p>
-                 <button onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+                 <p>{plant.price}</p>
+                 <button onClick={() => handleAddToCart(plant.id)}>Add to Cart</button>
                </div>
              ))}
           </div>

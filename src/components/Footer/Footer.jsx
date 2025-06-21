@@ -3,9 +3,12 @@ import styles from './Footer.module.css'
 import facebook from '../../assets/icons/facebook.svg'
 import insta from '../../assets/icons/insta.svg'
 import twitter from '../../assets/icons/twitter.svg'
+import { Link } from 'react-router-dom'
+import { CUSTOM_ROUTES } from '../constants/custom-routes'
 
 const Footer =()=>{
     return(
+
         <div className={styles.footercontainer}>
         <div className={styles.footer}>
             <div>
@@ -31,29 +34,22 @@ const Footer =()=>{
                 <div>
                     <p className={styles.p}>Information</p>
                     <div className={styles.p1}>
-                     <p>About</p>
-                     <p>Product</p>
-                     <p>Blog</p>
+                     <Link to={CUSTOM_ROUTES.HOME} style={{ textDecoration: "none", color: "inherit" }}><p>About</p></Link>
+                     <Link to={CUSTOM_ROUTES.ALL_PRODUCTS }style={{ textDecoration: "none", color: "inherit" }}><p>Product</p></Link>
+                     <Link to={CUSTOM_ROUTES.FAQ} style={{ textDecoration: "none", color: "inherit" }}><p>Faq</p></Link>
+                     
                     </div>
                     
                 </div>
 
-                <div>
-                    <p className={styles.p}>Company</p>
-                    <div className={styles.p1}>
-                      <p>Community</p>
-                      <p>Career</p>
-                      <p>Our story</p>
-                    </div>
-
-                </div>
+                
 
                 <div >
                     <p className={styles.p}>Contact</p>
                     <div className={styles.p1}>
-                     <p>Getting Started</p>
-                     <p>Pricing</p>
-                     <p>Resources</p>
+                     <p>NYC, United States</p>
+                     <p>000111222333</p>
+                     <p>somebody@gmail.com</p>
                     </div>
                     
                 </div>

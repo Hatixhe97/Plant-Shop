@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <>
       <div className={styles.contactcontainer}>
-        <div >
+        <div className={styles.contactform}>
           <h1>Contact us</h1>
           <form onSubmit={handleSubmit} className={styles.form}>
             <input type="text" name="name" placeholder="Name" />

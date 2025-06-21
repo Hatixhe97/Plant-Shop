@@ -1,11 +1,5 @@
 import "./App.css";
-import AboutUs from "./components/AboutUs/AboutUs";
 import BestSelling from "./components/BestSelling/BestSelling";
-import BestSellingHero from "./components/BestSelling/BestSellingHero";
-import Categories from "./components/Categories/Categories";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/header/header";
-import Hero from "./components/Hero/Hero";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";

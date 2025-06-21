@@ -14,7 +14,6 @@ const CartPage = () => {
     navigate(CUSTOM_ROUTES.HOME);
   };
 
-  // Funksioni për të llogaritur totalin
   const calculateTotal = (items) => {
     const sum = items.reduce(
       (acc, item) => acc + item.price * item.quantity,
@@ -23,7 +22,6 @@ const CartPage = () => {
     setTotal(sum);
   };
 
-  // Sa herë që ndryshojnë artikujt në karrocë, llogarit totalin
   useEffect(() => {
     calculateTotal(cartItems);
   }, [cartItems]);

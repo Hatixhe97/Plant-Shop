@@ -12,4 +12,5 @@ export const CUSTOM_ROUTES ={
     ARTIFICIAL: "/plants/ArtificialPlants",
     ALL_PRODUCTS: "/plants/AllProducts",
     CART:"/CartPage",
+   
 }

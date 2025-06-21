@@ -7,15 +7,10 @@ import { login} from '../../services/authServices';
 const Login=()=>{
 
     const navigate = useNavigate();
-    
-    /*const handleCreatAccount = () => {
-        navigate(CUSTOM_ROUTES.REGISTER);
-    }*/
 
     const [email,setEmail] = useState ('');
     const [password,setPassword] = useState ('');
 
-    //const [isRegistrationSuccess, setIsRegistrationSuccess]=useState(false)
 
 
     const handleLogin = async (event) =>{
@@ -33,14 +28,6 @@ const Login=()=>{
 
         }
     }
-
-  /*if (isRegistrationSuccess) {
-        return(
-         <h1>Registration was successfully!</h1>
-        )
-    }*/
-
-    
 
 
     return(
@@ -61,7 +48,7 @@ const Login=()=>{
 
                <div className={styles.select}>
                   <p>Forgot password?</p>
-                 <p>Don’t have an account? <Link to={CUSTOM_ROUTES.REGISTER}><span className={styles.click} /*onClick={handleCreatAccount}*/>Create</span></Link></p>
+                 <p>Don’t have an account? <Link to={CUSTOM_ROUTES.REGISTER}><span className={styles.click} >Create</span></Link></p>
                </div>
 
                 <button className={styles.button}>Log In</button>
