@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getProductsByCategory } from "../../../services/productService";
 import styles from "./Products.module.css";
-import { useCart } from "../../../Store/CartContext";
+import { useCart } from "../../../Store/cartContext";
 
 const ArtificialPlants = () => {
   const [products, setProducts] = useState([]);

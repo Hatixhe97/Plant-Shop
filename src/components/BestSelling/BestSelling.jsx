@@ -4,7 +4,7 @@ import { getAllProducts } from "../../services/productService";
 import { CUSTOM_ROUTES } from "../constants/custom-routes";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
-import { useCart } from "../../Store/CartContext";
+import { useCart } from "../../Store/cartContext";
 
 const BestSelling = () => {
   const [plants, setPlants] = useState([]);

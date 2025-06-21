@@ -14,7 +14,7 @@ import orders from "../../assets/icons/orders.svg";
 import mail from "../../assets/icons/mail.svg";
 import productbase from "../../assets/icons/productbase.svg";
 import logOut from "../../assets/icons/log-out.svg";
-import { useCart } from "../../Store/CartContext";
+import { useCart } from "../../Store/cartContext";
 
 const Header = () => {
   const [submenu, setSubmenu] = useState(false);

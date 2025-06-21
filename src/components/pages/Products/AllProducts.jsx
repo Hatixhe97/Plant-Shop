@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllProducts } from "../../../services/productService";
 import styles from "./Products.module.css";
-import { useCart } from "../../../Store/CartContext";
+import { useCart } from "../../../Store/cartContext";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);

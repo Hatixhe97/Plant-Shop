@@ -1,4 +1,4 @@
-import { useCart } from "../../../Store/CartContext";
+import { useCart } from "../../../Store/cartContext";
 import { useEffect, useState } from "react";
 import { CUSTOM_ROUTES } from "../../constants/custom-routes";
 import { useNavigate } from "react-router-dom";
@@ -41,9 +41,7 @@ const CartPage = () => {
               <div className={styles.productscard}>
                 <img src={item.image} alt={item.name} />
                 <h3>{item.name}</h3>
-                <p>
-                  ${item.price}
-                </p>
+                <p>${item.price}</p>
               </div>
 
               <div>
